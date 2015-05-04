@@ -57,7 +57,7 @@ public :
 
     void loadBomb();
 
-private :
+protected :
     std::vector<Vec3> m_Vertex;
     std::vector<Vec3> m_Normal;
     std::vector<Vec3> m_Tex;

@@ -35,7 +35,7 @@ public:
     CrackBlock ct;
     Bomb bomb;
     Explosion exp;
-private:
+protected:
     int map[13][13];
     std::vector<GLint> m_DisplayList;
 

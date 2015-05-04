@@ -14,6 +14,7 @@ void Floor::update()
   glCallLists( m_DisplayList.size(), GL_UNSIGNED_INT, &m_DisplayList[0] );
 }
 
+//------------------------------------------------------------------------------------------------------------
 void Floor::loadFloor()
 {
   //Initial loading of the floor

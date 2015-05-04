@@ -2,6 +2,10 @@
  Copyright 2015 Matt Skellon
  1st Year SDAGE PPP Assignment 2
 */
+//------------------------------------------------------------------------------------------------------------
+/// @file Main.cpp
+/// @brief The main file from which the game runs
+//------------------------------------------------------------------------------------------------------------
 
 #include <iostream>
 #include <cstdlib>
@@ -137,7 +141,8 @@ int main()
     map.draw();
 
     //Checking if WASD or an arrow key is pressed
-    //If so, check the character can move and rotate
+    //If so, rotate and check the character can move
+    //If it can, move while the key is held
     if( keystate[SDL_SCANCODE_W] || keystate[SDL_SCANCODE_UP] )
     {
       if( map.bMan.m_CanMoveUp == true )
