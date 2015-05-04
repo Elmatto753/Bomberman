@@ -63,6 +63,7 @@ int initSDL()
   return EXIT_SUCCESS;
 }
 
+//------------------------------------------------------------------------------------------------------------
 int main()
 {
   //Start up SDL and create the window
