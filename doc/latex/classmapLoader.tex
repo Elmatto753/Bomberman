@@ -1,0 +1,72 @@
+\hypertarget{classmapLoader}{\section{map\-Loader Class Reference}
+\label{classmapLoader}\index{map\-Loader@{map\-Loader}}
+}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classmapLoader_ad2a9867e6b3b040820048c1dba771cc7}{map\-Loader} (const std\-::string \&\-\_\-filename)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classmapLoader}{map\-Loader} \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_a84d3e78c823100c1fe13a96362404426}{void \hyperlink{classmapLoader_a84d3e78c823100c1fe13a96362404426}{load\-Map} (const std\-::string \&\-\_\-filename)}\label{classmapLoader_a84d3e78c823100c1fe13a96362404426}
+
+\begin{DoxyCompactList}\small\item\em Loads the map by taking in a file and reading it (in this case map.\-txt) \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_a2be9db6c6c38d137e094fa3111e9a982}{void \hyperlink{classmapLoader_a2be9db6c6c38d137e094fa3111e9a982}{draw} ()}\label{classmapLoader_a2be9db6c6c38d137e094fa3111e9a982}
+
+\begin{DoxyCompactList}\small\item\em Draws the map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmapLoader_afa80f79c630fbad68ae7c682f85bd41d}{\hyperlink{classBomberman}{Bomberman} \hyperlink{classmapLoader_afa80f79c630fbad68ae7c682f85bd41d}{b\-Man}}\label{classmapLoader_afa80f79c630fbad68ae7c682f85bd41d}
+
+\begin{DoxyCompactList}\small\item\em A player character object. \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_a76b940a02c4efbd94ad008cf2b7c5e1c}{\hyperlink{classMetalBlock}{Metal\-Block} \hyperlink{classmapLoader_a76b940a02c4efbd94ad008cf2b7c5e1c}{mt}}\label{classmapLoader_a76b940a02c4efbd94ad008cf2b7c5e1c}
+
+\begin{DoxyCompactList}\small\item\em A metal block object. \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_afd38edb273cf54277a4a2a83a29a405b}{\hyperlink{classCrackBlock}{Crack\-Block} \hyperlink{classmapLoader_afd38edb273cf54277a4a2a83a29a405b}{ct}}\label{classmapLoader_afd38edb273cf54277a4a2a83a29a405b}
+
+\begin{DoxyCompactList}\small\item\em A cracked block object. \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_a7a190b73f34fddf1f7f6585070fa5323}{\hyperlink{classBomb}{Bomb} \hyperlink{classmapLoader_a7a190b73f34fddf1f7f6585070fa5323}{bomb}}\label{classmapLoader_a7a190b73f34fddf1f7f6585070fa5323}
+
+\begin{DoxyCompactList}\small\item\em A bomb object. \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_abc7f40a6ba044d63afe0a9d067c51057}{\hyperlink{classExplosion}{Explosion} \hyperlink{classmapLoader_abc7f40a6ba044d63afe0a9d067c51057}{exp}}\label{classmapLoader_abc7f40a6ba044d63afe0a9d067c51057}
+
+\begin{DoxyCompactList}\small\item\em An explosion object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmapLoader_afc6d66d69cf7daeb5683cb7c6ff2c989}{void \hyperlink{classmapLoader_afc6d66d69cf7daeb5683cb7c6ff2c989}{check\-Collisions} ()}\label{classmapLoader_afc6d66d69cf7daeb5683cb7c6ff2c989}
+
+\begin{DoxyCompactList}\small\item\em The function used to check if certain objects have collided. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classmapLoader_a9dc0a8eb27fc1d711e5bdfc47c20e3a0}{int \hyperlink{classmapLoader_a9dc0a8eb27fc1d711e5bdfc47c20e3a0}{map} \mbox{[}13\mbox{]}\mbox{[}13\mbox{]}}\label{classmapLoader_a9dc0a8eb27fc1d711e5bdfc47c20e3a0}
+
+\begin{DoxyCompactList}\small\item\em Stores the value found in the .txt file for use with drawing and collision detection. \end{DoxyCompactList}\item 
+\hypertarget{classmapLoader_aa1b19be7a0f465bbd0ec773d267b9be6}{std\-::vector$<$ G\-Lint $>$ \hyperlink{classmapLoader_aa1b19be7a0f465bbd0ec773d267b9be6}{m\-\_\-\-Display\-List}}\label{classmapLoader_aa1b19be7a0f465bbd0ec773d267b9be6}
+
+\begin{DoxyCompactList}\small\item\em Storage for some G\-L functions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classmapLoader_ad2a9867e6b3b040820048c1dba771cc7}{\index{map\-Loader@{map\-Loader}!map\-Loader@{map\-Loader}}
+\index{map\-Loader@{map\-Loader}!mapLoader@{map\-Loader}}
+\subsubsection[{map\-Loader}]{\setlength{\rightskip}{0pt plus 5cm}map\-Loader\-::map\-Loader (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{\-\_\-filename}
+\end{DoxyParamCaption}
+)}}\label{classmapLoader_ad2a9867e6b3b040820048c1dba771cc7}
+
+
+\hyperlink{classmapLoader}{map\-Loader} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \-\_\-filename} & \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{MapLoader_8h}{Map\-Loader.\-h}\item 
+src/\hyperlink{MapLoader_8cpp}{Map\-Loader.\-cpp}\end{DoxyCompactItemize}
