@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file Bomberman.h
 /// \brief Handles the processes associated with the player character's creation, allowing movement, position and rotation
 /// \author Matthew Skellon

@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 #include <iostream>
 #include <SDL2/SDL_image.h>
 #include "Scene.h"

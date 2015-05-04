@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file Scene.h
 /// \brief The basic functions for building the scene, loading in the .obj files and ensuring they look as they should.
 /// \author Matthew Skellon

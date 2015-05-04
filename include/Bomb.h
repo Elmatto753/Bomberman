@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file Bomb.h
 /// \brief Handles the processes associated with a bomb's creation, lifetime and destruction
 /// \author Matthew Skellon

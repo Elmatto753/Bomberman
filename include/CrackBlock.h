@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file CrackBlock.h
 /// \brief Handles the processes associated with the creation of the breakable "cracked rocks". The destruction of each individual rock is handled in MapLoader.h
 /// \author Matthew Skellon

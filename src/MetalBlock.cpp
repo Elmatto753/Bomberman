@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 #include "MetalBlock.h"
 //------------------------------------------------------------------------------------------------------------
 /// @file MetalBlock.cpp
@@ -8,8 +13,9 @@ void MetalBlock::loadMBlock()
   m_DisplayList = glGenLists(1);
   glNewList( m_DisplayList, GL_COMPILE );
 
+    //Assign the texture and begin building the model in triangles
     glBindTexture( GL_TEXTURE_2D, m_Texture );
-    glScalef( 0.2,0.2,0.2 );
+    glScalef( 0.2, 0.2, 0.2 );
     glBegin( GL_TRIANGLES );
 
       for( int i=0; i<(int)m_v_Index.size(); i++ )

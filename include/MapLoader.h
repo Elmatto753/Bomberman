@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file MapLoader.h
 /// \brief Calls for the creation of each game element according to a .txt file and updates their position and status, as well as checking for collisions between the player and some of these elements
 /// \author Matthew Skellon

@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file Floor.h
 /// \brief Creates and updates the floor of the game
 /// \author Matthew Skellon

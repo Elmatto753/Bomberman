@@ -1,3 +1,8 @@
+/*
+ Copyright 2015 Matt Skellon
+ 1st Year SDAGE PPP Assignment 2
+*/
+
 /// \file MetalBlock.h
 /// \brief Handles the processes associated with the creation of the unbreakable "metal blocks".
 /// \author Matthew Skellon
