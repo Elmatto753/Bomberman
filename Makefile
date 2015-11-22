@@ -47,24 +47,16 @@ OBJECTS_DIR   = obj/
 
 SOURCES       = src/Main.cpp \
 		src/OBJLoader.cpp \
-		src/Vec.cpp \
-		src/Bomberman.cpp \
-		src/Bomb.cpp \
-		src/MetalBlock.cpp \
 		src/MapLoader.cpp \
-		src/CrackBlock.cpp \
+		src/Vec.cpp \
 		src/Floor.cpp \
-		src/Explosion.cpp 
+		src/Object.cpp 
 OBJECTS       = obj/Main.o \
 		obj/OBJLoader.o \
-		obj/Vec.o \
-		obj/Bomberman.o \
-		obj/Bomb.o \
-		obj/MetalBlock.o \
 		obj/MapLoader.o \
-		obj/CrackBlock.o \
+		obj/Vec.o \
 		obj/Floor.o \
-		obj/Explosion.o
+		obj/Object.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/shell-unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
@@ -284,7 +276,7 @@ qmake_all: FORCE
 
 dist: 
 	@test -d obj/Bomberman1.0.0 || mkdir -p obj/Bomberman1.0.0
-	$(COPY_FILE) --parents $(SOURCES) $(DIST) obj/Bomberman1.0.0/ && $(COPY_FILE) --parents include/Bomberman.h include/Scene.h include/Bomb.h include/MetalBlock.h include/MapLoader.h include/CrackBlock.h include/Floor.h include/Explosion.h obj/Bomberman1.0.0/ && $(COPY_FILE) --parents src/Main.cpp src/OBJLoader.cpp src/Vec.cpp src/Bomberman.cpp src/Bomb.cpp src/MetalBlock.cpp src/MapLoader.cpp src/CrackBlock.cpp src/Floor.cpp src/Explosion.cpp obj/Bomberman1.0.0/ && (cd `dirname obj/Bomberman1.0.0` && $(TAR) Bomberman1.0.0.tar Bomberman1.0.0 && $(COMPRESS) Bomberman1.0.0.tar) && $(MOVE) `dirname obj/Bomberman1.0.0`/Bomberman1.0.0.tar.gz . && $(DEL_FILE) -r obj/Bomberman1.0.0
+	$(COPY_FILE) --parents $(SOURCES) $(DIST) obj/Bomberman1.0.0/ && $(COPY_FILE) --parents include/Bomberman.h include/Scene.h include/Bomb.h include/MetalBlock.h include/MapLoader.h include/CrackBlock.h include/Floor.h include/Explosion.h include/Object.h obj/Bomberman1.0.0/ && $(COPY_FILE) --parents src/Main.cpp src/OBJLoader.cpp src/MapLoader.cpp src/Vec.cpp src/Floor.cpp src/Object.cpp obj/Bomberman1.0.0/ && (cd `dirname obj/Bomberman1.0.0` && $(TAR) Bomberman1.0.0.tar Bomberman1.0.0 && $(COMPRESS) Bomberman1.0.0.tar) && $(MOVE) `dirname obj/Bomberman1.0.0`/Bomberman1.0.0.tar.gz . && $(DEL_FILE) -r obj/Bomberman1.0.0
 
 
 clean:compiler_clean 
@@ -323,6 +315,7 @@ compiler_clean:
 
 obj/Main.o: src/Main.cpp include/Scene.h \
 		include/Bomberman.h \
+		include/Object.h \
 		include/Bomb.h \
 		include/MapLoader.h \
 		include/MetalBlock.h \
@@ -334,46 +327,31 @@ obj/Main.o: src/Main.cpp include/Scene.h \
 obj/OBJLoader.o: src/OBJLoader.cpp include/Scene.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/OBJLoader.o src/OBJLoader.cpp
 
-obj/Vec.o: src/Vec.cpp include/Scene.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Vec.o src/Vec.cpp
-
-obj/Bomberman.o: src/Bomberman.cpp include/Bomberman.h \
-		include/Scene.h \
-		include/MapLoader.h \
-		include/MetalBlock.h \
-		include/CrackBlock.h \
-		include/Bomb.h \
-		include/Explosion.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Bomberman.o src/Bomberman.cpp
-
-obj/Bomb.o: src/Bomb.cpp include/Bomb.h \
-		include/Scene.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Bomb.o src/Bomb.cpp
-
-obj/MetalBlock.o: src/MetalBlock.cpp include/MetalBlock.h \
-		include/Scene.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/MetalBlock.o src/MetalBlock.cpp
-
 obj/MapLoader.o: src/MapLoader.cpp include/MapLoader.h \
 		include/MetalBlock.h \
 		include/Scene.h \
+		include/Object.h \
 		include/CrackBlock.h \
 		include/Bomberman.h \
 		include/Bomb.h \
 		include/Explosion.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/MapLoader.o src/MapLoader.cpp
 
-obj/CrackBlock.o: src/CrackBlock.cpp include/CrackBlock.h \
-		include/Scene.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/CrackBlock.o src/CrackBlock.cpp
+obj/Vec.o: src/Vec.cpp include/Scene.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Vec.o src/Vec.cpp
 
 obj/Floor.o: src/Floor.cpp include/Floor.h \
 		include/Scene.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Floor.o src/Floor.cpp
 
-obj/Explosion.o: src/Explosion.cpp include/Explosion.h \
-		include/Scene.h
-	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Explosion.o src/Explosion.cpp
+obj/Object.o: src/Object.cpp include/Bomb.h \
+		include/Scene.h \
+		include/Object.h \
+		include/Bomberman.h \
+		include/CrackBlock.h \
+		include/Explosion.h \
+		include/MetalBlock.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o obj/Object.o src/Object.cpp
 
 ####### Install
 

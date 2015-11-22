@@ -6,19 +6,16 @@ HEADERS += \
     include/MapLoader.h \
     include/CrackBlock.h \
     include/Floor.h \
-    include/Explosion.h
+    include/Explosion.h \
+    include/Object.h
 
 SOURCES += \
     src/Main.cpp \
     src/OBJLoader.cpp \
-    src/Vec.cpp \
-    src/Bomberman.cpp \
-    src/Bomb.cpp \
-    src/MetalBlock.cpp \
     src/MapLoader.cpp \
-    src/CrackBlock.cpp \
+    src/Vec.cpp \
     src/Floor.cpp \
-    src/Explosion.cpp
+    src/Object.cpp
 
 OTHER_FILES += \
     models/Bomberman.obj \
